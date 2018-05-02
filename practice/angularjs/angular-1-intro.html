@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS - Introduction</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+
+	<div>
+		<h1>AngularJS is a JS Framework</h1>
+		<p>AngularJS is a JS framework which can be added an HTML page.</p>
+		<p>AngularJS extends HTML attributes with <strong>directives</strong>, and binds data to HTML with expressions.</p>
+		<p>The framework can be included using a script tag to call: https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js</p>
+	</div>
+
+	<hr>
+
+	<div id="app1" np-app="inputApp">
+		<h1>AngularJS Extends HTML</h1>
+		<p>AngularJS extends HTML with ng-directives</p>
+		<p>The ng-app directive degines an aJS application</p>
+		<p>The ng-model directive binds the value of HTML controls (input, select, textarea) to application data</p>
+		<p>The ng-bind directive binds application data to the HTML view</p>
+		<p>Input Name: <input type="text" ng-model="name"></p>
+		<p>Result: <span ng-bind="name"></span></p>
+		<p>Explanation: aJS starts when the page has loaded, ng-app directive tells aJS where the scope of the app is, ng-model directive binds value of the input to a var called "name", lastly, ng-bind directive binds the innerHTML of the p tag with the same value from the var "name"</p>
+	</div>
+
+	<hr>
+
+	<div id="app2" ng-app="namesApp" ng-init="firstName='John'">
+		<h1>Angular JS Directives</h1>
+		<p>Directives are html attributes with an ng prefix <strong>ng-app</strong></p>
+		<p><strong>ng-init</strong> initializes variables eg. John</p>
+		<p>Addding data prefix makes the page html valid: <strong>data-np-app</strong></p>
+		<p>Name: <input type="text" ng-model="firstName"></p>
+		<p>The name is <span ng-bind="firstName"></span></p>
+	</div>
+
+	<hr>
+
+	<div id="app3" ng-app="expressionApp" ng-init="myCol='#888'">
+		<h1>AngularJS Expression</h1>
+		<p>Expressions are written inside double braces { { expression } }</p>
+		Expressions can also be written inside a directive: <strong>ng-bind="<em>expression</em>"</strong>
+		<p>AngularJS will resolve the expression, and return the result exactly where the expression is written</p>
+		<p>AngularJS expressions are much like JavaScript Expressions: they contain literals, operators and variables { { 5 + 5 } } or { { firstName + " " + lastName } }</p>
+		<p>My expression: 5 + 5 = {{ 5 + 5 }}</p>
+		<p>Example of changing css properties with an initialized variable: <strong>ng-init="myCol='#888'"</strong><br>
+			<input type="text" style="background-color:{{myCol}}" ng-model="myCol" value="{{myCol}}">
+		</p>
+	</div>
+
+	<hr>
+
+	<div id="app4" ng-app="ajsApp" ng-controller="myCtrl">
+		<h1>AngularJS Applications</h1>
+		modules define the aJS applications
+		controllers control aJS applications
+		the ng-app directive defines the application, the ng-controller directive defines the controller<br>
+		First Name: <input type="text" ng-model="firstName"><br>
+		Last Name: <input type="text" ng-model="lastName"><br>
+		Full Name: {{ firstName + " " + lastName }}
+	</div>
+
+	<script>
+
+		// The following code allows you manually to bootstrap multiple apps within the same html document
+		
+		// Initializes inputApp
+		var inputModule = angular.module('inputApp', []);
+		angular.bootstrap(document.getElementById('app1'), ['inputApp']);
+
+		// Initializes namesApp
+		var namesModule = angular.module('namesApp', []);
+		angular.bootstrap(document.getElementById('app2'), ['namesApp']);
+
+		// Initializes expressionApp
+		var expressionModule = angular.module('expressionApp', []);
+		angular.bootstrap(document.getElementById('app3'), ['expressionApp']);
+
+		// Initializes ajsApp with scope arrays
+		var ajsModule = angular.module('ajsApp', []);
+		ajsModule.controller('myCtrl', function($scope) {
+			$scope.firstName = 'John';
+			$scope.lastName = 'Doe';
+		});
+		angular.bootstrap(document.getElementById('app4'), ['ajsApp']);
+
+	</script>
+
+</body>
+</html>
