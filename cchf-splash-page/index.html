@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:image" content="src/cchf-logo-large.png">
+	<meta name="description" content="Canada's Children's Hospital Foundations (CCHF) raises funds and awareness for pediatric hospitals in Canada. If we can change the health of kids, we can change the health of Canada. Donate today.">
+	<title>Canada's Children's Hospital Foundations | We can change the health of Canada</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon-144.png">
+	<link rel="stylesheet" type="text/css" href="src/style.css">
+	<link rel="stylesheet" type="text/css" href="https://use.typekit.net/fen0ccr.css">
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+	<script type="text/javascript" src="src/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<header>
+		<img src="src/cchf-logo-2x.png" class="logo" alt="Canada's Children's Hospital Foundations Logo">
+	</header>
+	<div class="contentWrapper">
+		<h1 class="title"></h1>
+		<p class="content"></p>
+	</div>
+
+	<script>
+		const $title = $('.contentWrapper .title');
+		const $content = $('.contentWrapper .content');
+
+		let contentApp = {};
+		contentApp.enTitle = "It's Finally Here!";
+		contentApp.enContent = "We're happy to announce that the Canada's Children's Hospital Foundations Website will be live on April 20th, 2019. Sign up to learn more and receive ongoing news about CCHF."
+		contentApp.frTitle = "FR It's Finally Here!";
+		contentApp.frContent = "FR We're happy to announce that the Canada's Children's Hospital Foundations Website will be live on April 20th, 2019. Sign up to learn more and receive ongoing news about CCHF."
+
+		contentApp.init = function() {
+			$title[0].innerText = contentApp.enTitle;
+			$content[0].innerText = contentApp.enContent;
+		}
+
+
+		// console.log($title[0].innerText);
+		// console.log($content[0].innerText);
+
+		//const url = new URL("http://cchf.local");
+		// //url.pathname = "goradii.com";
+		// console.log(url);
+		// console.log(url.hostname);
+		// console.log(url.pathname);
+
+		const newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname
+		const newHost = window.location.host;
+		// console.log(newURL);
+		// console.log(window.location.host);
+
+		if (newHost === "hpec.goradii.com" ) {
+			console.log('true');
+			console.log(newHost);
+		} else {
+			console.log('false');
+			console.log(newHost);
+		}
+		$(document).ready(function() {
+			contentApp.init();
+		});
+
+	</script>
+
+</body>
+<footer>
+	<!-- Google Tag Manager -->
+	<script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-TQPL6LK"></script>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TQPL6LK');</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129172088-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-21269101-10');
+	</script>
+
+</footer>
+</html>
