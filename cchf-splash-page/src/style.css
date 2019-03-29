@@ -109,3 +109,12 @@ p {
 #mc_embed_signup input[type=submit]:active {
 	background-color: #ff9f6a;
 }
+#mce-responses .response {
+	padding: 15px 0;
+	font-size: 20px;
+    font-weight: 300;
+}
+#mce-responses .response a {
+	text-decoration: underline;
+	color: #fff;
+}
