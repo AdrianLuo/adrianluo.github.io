@@ -41,7 +41,7 @@ p {
 .signup-form {
 	display: block;
 }
-#mc_embed_signup label, #mc_embed_signup #mce-responses {
+#mc_embed_signup label {
 	position: absolute;
 	opacity: 0;
 	left: -100px;
