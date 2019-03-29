@@ -24,32 +24,25 @@
 
 	<script>
 		const newHost = window.location.host;
-		const frHost = "adrianluo.github.io";
-		//let $language = $('html')[0].lang;
+		let frHost = "adrianluo.github.io";
 		const $logo = $('.logo');
 		const $title = $('.contentWrapper .title');
 		const $content = $('.contentWrapper .content');
 
 		let contentApp = {};
 		contentApp.enTitle = "It's Finally Here!";
-		contentApp.enContent = "We're happy to announce that the Canada's Children's Hospital Foundations Website will be live on April 20th, 2019. Sign up to learn more and receive ongoing news about CCHF."
+		contentApp.enContent = "We're happy to announce that the Canada's Children's Hospital Foundations Website will be live on April 20th, 2019. Sign up to learn more and receive ongoing news about CCHF.";
+		contentApp.frTitle = "Les Fondations D'Hôpitaux Pour Enfants Du Canda | FR We can change the health of Canada";
 		contentApp.frLogo = "src/cchf-logo-fr-2x.png";
-		contentApp.frTitle = "FR It's Finally Here!";
-		contentApp.frContent = "FR We're happy to announce that the Canada's Children's Hospital Foundations Website will be live on April 20th, 2019. Sign up to learn more and receive ongoing news about CCHF."
-
-		//console.log($language);
-
-		
-
-		// console.log($language);
-		// console.log($('html'));
+		contentApp.frHeading = "FR It's Finally Here!";
+		contentApp.frContent = "FR We're happy to announce that the Canada's Children's Hospital Foundations Website will be live on April 20th, 2019. Sign up to learn more and receive ongoing news about CCHF.";
 
 		contentApp.init = function() {
 
 			if (newHost === frHost) {
 				$('html')[0].lang = 'fr';
 				$logo[0].src = contentApp.frLogo;
-				$title[0].innerText = contentApp.frTitle;
+				$title[0].innerText = contentApp.frHeading;
 				$content[0].innerText = contentApp.frContent;
 			} else {
 				$title[0].innerText = contentApp.enTitle;
@@ -57,26 +50,6 @@
 			}
 			
 		}
-
-
-		// console.log($title[0].innerText);
-		// console.log($content[0].innerText);
-
-		//const url = new URL("http://cchf.local");
-		// //url.pathname = "goradii.com";
-		// console.log(url);
-		// console.log(url.hostname);
-		// console.log(url.pathname);
-
-		//const newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname
-
-
-
-		
-		
-		// console.log(newURL);
-		// console.log(window.location.host);
-
 		
 		$(document).ready(function() {
 			contentApp.init();
