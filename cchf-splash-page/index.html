@@ -21,46 +21,9 @@
 		<h1 class="title"></h1>
 		<p class="content"></p>
 	</div>
-
-	<script>
-		let frHost = ["adrianluo.github.io", "hpec.goradii.com"];
-		const newHost = window.location.host;
-		const $logo = $('.logo');
-		const $title = $('.contentWrapper .title');
-		const $content = $('.contentWrapper .content');
-
-		let contentApp = {};
-		contentApp.enTitle = "It's Finally Here!";
-		contentApp.enContent = "We're happy to announce that the Canada's Children's Hospital Foundations Website will be live on April 20th, 2019. Sign up to learn more and receive ongoing news about CCHF.";
-		contentApp.frTitle = "Les Fondations D'Hôpitaux Pour Enfants Du Canda | FR We can change the health of Canada";
-		contentApp.frLogo = "src/cchf-logo-fr-2x.png";
-		contentApp.frHeading = "FR It's Finally Here!";
-		contentApp.frContent = "FR We're happy to announce that the Canada's Children's Hospital Foundations Website will be live on April 20th, 2019. Sign up to learn more and receive ongoing news about CCHF.";
-
-		contentApp.init = function() {
-
-			if (frHost.includes(newHost)) {
-				$('html')[0].lang = 'fr';
-				$logo[0].src = contentApp.frLogo;
-				$title[0].innerText = contentApp.frHeading;
-				$content[0].innerText = contentApp.frContent;
-			} else {
-				$title[0].innerText = contentApp.enTitle;
-				$content[0].innerText = contentApp.enContent;
-			}
-
-			$logo.removeClass('hidden');
-			
-		}
-		
-		$(document).ready(function() {
-			contentApp.init();
-		});
-
-	</script>
-
 </body>
 <footer>
+	<script type="text/javascript" src="src/app.js"></script>
 	<!-- Google Tag Manager -->
 	<script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-TQPL6LK"></script>
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TQPL6LK');</script>
