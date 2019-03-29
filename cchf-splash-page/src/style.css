@@ -89,12 +89,11 @@ p {
 	font-size: 20px;
 	line-height: 1.1;
 	font-weight: 300;
+	background-image: transparent !important;
 	background-color: #F98442;
     border: none;
     color: #FFFFFF;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
+    border-radius: 4px !important;
     padding: 10px 5%;
     text-align: center;
     cursor: pointer;
