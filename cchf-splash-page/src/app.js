@@ -47,8 +47,5 @@ contentApp.init = () => {
 	}
 	$logo.removeClass('hidden');
 }
+// Run init
 contentApp.init();
-// Doc ready
-// $(document).ready(function() {
-	
-// });
