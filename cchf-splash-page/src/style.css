@@ -90,6 +90,7 @@ p {
 	display: inline-block;
 	width: 30%;
 	font-size: 20px;
+	line-height: 1.1;
 	font-weight: 300;
 	background-color: #F98442;
     border: none;
@@ -101,6 +102,7 @@ p {
     text-align: center;
     cursor: pointer;
     transition: ease 400ms;
+    vertical-align: top;
 }
 #mc_embed_signup input[type=submit]:hover,
 #mc_embed_signup input[type=submit]:focus,
