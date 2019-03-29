@@ -15,7 +15,7 @@
 </head>
 <body>
 	<header>
-		<img src="src/cchf-logo-2x.png" class="logo" alt="Canada's Children's Hospital Foundations Logo">
+		<img src="src/cchf-logo-2x.png" class="logo hidden" alt="Canada's Children's Hospital Foundations Logo">
 	</header>
 	<div class="contentWrapper">
 		<h1 class="title"></h1>
@@ -48,6 +48,8 @@
 				$title[0].innerText = contentApp.enTitle;
 				$content[0].innerText = contentApp.enContent;
 			}
+
+			$logo.removeClass('hidden');
 			
 		}
 		
