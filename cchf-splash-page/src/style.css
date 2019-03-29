@@ -99,6 +99,7 @@ p {
     cursor: pointer;
     transition: ease 400ms;
     vertical-align: top;
+    -webkit-appearance: none;
 }
 #mc_embed_signup input[type=submit]:hover,
 #mc_embed_signup input[type=submit]:focus,
