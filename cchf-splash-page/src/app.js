@@ -7,6 +7,8 @@ const $logo = $('.logo');
 const $title = $('title');
 const $heading = $('.contentWrapper .title');
 const $content = $('.contentWrapper .content');
+const $formEN = $('.signup-form.en');
+const $formFR = $('.signup-form.fr');
 // Page contents
 const contentApp = {};
 // English
@@ -26,9 +28,11 @@ contentApp.init = () => {
 		$logo.attr("src", contentApp.frLogo);
 		$heading.text(contentApp.frHeading);
 		$content.text(contentApp.frContent);
+		$formFR.removeClass('hidden');
 	} else {
 		$heading.text(contentApp.enHeading);
 		$content.text(contentApp.enContent);
+		$formEN.removeClass('hidden');
 	}
 	$logo.removeClass('hidden');
 }

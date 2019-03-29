@@ -9,11 +9,11 @@ html {
 	color: #fff;
 }
 .hidden {
-	display: none;
+	display: none !important;
 }
 header {
 	display: block;
-	margin-bottom: 10%;
+	margin-bottom: 8%;
 }
 .logo {
 	max-width: 200px;
