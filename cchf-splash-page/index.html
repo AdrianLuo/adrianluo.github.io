@@ -23,6 +23,8 @@
 	</div>
 
 	<script>
+		const newHost = window.location.host;
+		const frHost = "adrianluo.github.io";
 		const $title = $('.contentWrapper .title');
 		const $content = $('.contentWrapper .content');
 
@@ -33,8 +35,18 @@
 		contentApp.frContent = "FR We're happy to announce that the Canada's Children's Hospital Foundations Website will be live on April 20th, 2019. Sign up to learn more and receive ongoing news about CCHF."
 
 		contentApp.init = function() {
-			$title[0].innerText = contentApp.enTitle;
-			$content[0].innerText = contentApp.enContent;
+			if (newHost === frHost) {
+				console.log('host matched');
+				console.log(newHost);
+				$title[0].innerText = contentApp.frTitle;
+				$content[0].innerText = contentApp.frContent;
+			} else {
+				console.log('host not matched');
+				console.log(newHost);
+				$title[0].innerText = contentApp.enTitle;
+				$content[0].innerText = contentApp.enContent;
+			}
+			
 		}
 
 
@@ -47,18 +59,16 @@
 		// console.log(url.hostname);
 		// console.log(url.pathname);
 
-		const newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname
-		const newHost = window.location.host;
+		//const newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname
+
+
+
+		
+		
 		// console.log(newURL);
 		// console.log(window.location.host);
 
-		if (newHost === "adrianluo.github.io" ) {
-			console.log('host matched');
-			console.log(newHost);
-		} else {
-			console.log('host not matched');
-			console.log(newHost);
-		}
+		
 		$(document).ready(function() {
 			contentApp.init();
 		});
