@@ -23,8 +23,8 @@
 	</div>
 
 	<script>
+		let frHost = ["adrianluo.github.io", "hpec.goradii.com"];
 		const newHost = window.location.host;
-		let frHost = "adrianluo.github.io";
 		const $logo = $('.logo');
 		const $title = $('.contentWrapper .title');
 		const $content = $('.contentWrapper .content');
@@ -39,7 +39,7 @@
 
 		contentApp.init = function() {
 
-			if (newHost === frHost) {
+			if (frHost.includes(newHost)) {
 				$('html')[0].lang = 'fr';
 				$logo[0].src = contentApp.frLogo;
 				$title[0].innerText = contentApp.frHeading;
