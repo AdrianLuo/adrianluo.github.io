@@ -1,5 +1,5 @@
 // French host array
-const frHost = ["hpec.goradii.com", "adrianluo.github.io"];
+const frHost = ["hpec.goradii.com", "hopitauxpourenfants.ca", "www.hopitauxpourenfants.ca"];
 // Get current host
 const newHost = window.location.host;
 // DOM Vars
