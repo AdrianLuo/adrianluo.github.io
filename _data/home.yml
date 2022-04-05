@@ -1,0 +1,21 @@
+title:
+ - Adrian Luo
+
+content:
+ - |
+    <div class="wrapper">
+      <div class="home">
+        
+        <h1>Projects</h1>
+        
+        <h2 class="post-list-heading">Recent Work</h2>
+          
+        <ul class="post-list">
+          <li>
+            <span class="post-meta">April 5, 2022</span>
+            <h3><a class="post-link" href="/project-1/2022/04/05/project-one.html">Project One</a></h3>
+          </li>
+        </ul>
+
+      </div>
+    </div>

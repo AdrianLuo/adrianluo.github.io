@@ -1,0 +1,14 @@
+# dash (-) denotes array
+# need to use syntax - | to treat text as continuous string and ignore newline
+# English is first (index 0), French is second (index 1)
+
+# Title Contents
+title:
+- Project One
+
+imgUrl:
+- /assets/images/placeholder.jpg
+
+content:
+- |
+    <p>Content</p>
